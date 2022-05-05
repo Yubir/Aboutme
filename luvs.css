@@ -1,13 +1,30 @@
+
+/* 텍스트 센터 중앙 위치 */
+
 body {
   text-align: center;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
-.rainbow {
-  text-align: center;
-  font-size: 32px;
-  letter-spacing: 5px;
-  animation: colorRotate 6s linear 0s infinite;
+/* h1 무지개 텍스트 */
+
+h1 {
+  letter-spacing: 10px;
+  animation: colorRotate 2s linear 0s infinite;
 }
+
+/* Updating 무지개 텍스트 */
+
+.Updating {
+  animation: colorRotate 0.2s linear 0s infinite;
+}
+
+/* 무지개 텍스트 키프레임 */
 
 @keyframes colorRotate {
   from {
@@ -24,5 +41,24 @@ body {
   }
   100% {
     color: #6666ff;
+  }
+}
+
+/* 인트로 */
+
+body {
+  animation: fadeInAnimation ease 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+/* 인트로 키프레임*/
+
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
   }
 }
